@@ -6,5 +6,5 @@ ENV RABBITMQ_NODENAME=rabbit@localhost
 
 RUN chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.conf
 
-RUN useradd -D -d /var/lib/rabbitmq rabbitmq
+RUN useradd -rm -d /var/lib/rabbitmq rabbitmq
 USER rabbitmq:rabbitmq
