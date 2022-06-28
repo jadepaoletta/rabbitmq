@@ -6,5 +6,5 @@ ENV RABBITMQ_NODENAME=rabbit@localhost
 
 RUN chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.conf
 
-RUN adduser -D -g rabbitmq -h /var/lib/rabbitmq rabbitmq
+RUN chown -R rabbitmq:rabbitmq $HOME && chown -R rabbitmq:rabbitmq $HOME/.ssh && chmod 700 $HOME/.ssh
 USER rabbitmq:rabbitmq
