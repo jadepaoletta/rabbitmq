@@ -5,6 +5,6 @@ COPY rabbitmq.conf /etc/rabbitmq/
 ENV RABBITMQ_NODENAME=rabbit@localhost
 
 RUN chown rabbitmq:rabbitmq /etc/rabbitmq/rabbitmq.conf
+RUN chown rabbitmq:rabbitmq $HOME
 
-RUN chown -R rabbitmq:rabbitmq $HOME && chown -R rabbitmq:rabbitmq $HOME/.ssh && chmod 700 $HOME/.ssh
 USER rabbitmq:rabbitmq
